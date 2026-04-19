@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle2, Mail } from 'lucide-react';
 import { divisions } from '../data/divisions';
 import CTABanner from '../components/home/CTABanner';
 import LucideIcon from '../components/common/LucideIcon';
@@ -177,9 +177,9 @@ export default function DivisionDetailPage() {
                       </div>
 
                       {/* Desktop View (Table) - Hidden on mobile/tablet */}
-                      <div className="hidden lg:block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200">
-                        <div className="custom-scrollbar">
-                          <table className="w-full table-fixed text-sm text-left border-separate border-spacing-0">
+                      <div className="hidden lg:block rounded-2xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200 overflow-hidden">
+                        <div className="overflow-x-auto custom-scrollbar">
+                          <table className="w-full table-auto text-sm text-left border-separate border-spacing-0 min-w-[800px]">
                             <thead>
                               <tr className={`${theme.bg} ${theme.accent} border-b ${theme.border}`}>
                                 <th className={`w-[28%] px-5 py-4 font-bold uppercase tracking-wider text-[12px] border-b ${theme.border} ${theme.bg}`}>
@@ -245,18 +245,7 @@ export default function DivisionDetailPage() {
                 </ul>
               </div>
 
-              {/* Certifications */}
-              <div className="bg-gradient-to-br from-navy-900 to-teal-900 rounded-2xl p-6 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <h3 className="font-display font-bold text-lg mb-4">Certifications</h3>
-                <div className="space-y-3">
-                  {['ISO 9001:2015', 'GMP Certified', 'GLP Certified'].map((c) => (
-                    <div key={c} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0"><CheckCircle2 size={14} className="text-white" /></div>
-                      <span className="text-white/90 text-sm">{c}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+
 
               {/* CTA card */}
               <div className="card p-6 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -265,6 +254,15 @@ export default function DivisionDetailPage() {
                 </div>
                 <h3 className="font-display font-bold text-navy-900 mb-2">Business Enquiry</h3>
                 <p className="text-slate-500 text-sm mb-5">Interested in {division.name} products? Contact us for pricing and availability.</p>
+                {division.email && (
+                  <a 
+                    href={`mailto:${division.email}`} 
+                    className="flex items-center justify-center gap-2 text-navy-900 hover:text-teal-600 font-semibold mb-5 text-sm transition-colors break-all"
+                  >
+                    <Mail size={16} className="text-teal-600 flex-shrink-0" />
+                    {division.email}
+                  </a>
+                )}
                 <Link to="/contact" className="btn-primary w-full justify-center text-sm">
                   Contact Us <ArrowRight size={14} />
                 </Link>

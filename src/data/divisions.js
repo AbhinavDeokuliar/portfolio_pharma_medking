@@ -13,7 +13,8 @@ export const divisions = [
     isDataAvailable: true,
     description:
       "Devchem Biotech specializes in advanced biotechnology formulations, combining cutting-edge science with pharmaceutical expertise to deliver innovative healthcare solutions.",
-    specialties: ["Biologicals", "Biosimilars", "Biotech APIs", "Fermentation Products"],
+    email: "devchembiotech@gmail.com",
+    specialties: ["Biologicals", "Biosimilars", "Biotech APIs", "Gastro", "Diabetic", "Neuro"],
     products: [
       { name: "ACHEM-P", composition: "Aceclofenac 100mg & Paracetamol 325mg Tablets", packaging: "10 x 10", category: "Tablets", form: "Tablet" },
       { name: "ACHEM-PLUS", composition: "Aceclofenac 100mg, Paracetamol 325mg & Serratiopeptidase 15mg Tablets", packaging: "10 x 10", category: "Tablets", form: "Tablet" },
@@ -43,7 +44,7 @@ export const divisions = [
       { name: "V2-PLUS", composition: "Multivitamin + Multiminerals + Antioxidants", packaging: "200ml", category: "Syrup/Susp.", form: "Syrup" },
       { name: "TRILIV", composition: "Tricholine Citrate 0.55gm + Sorbitol 7.15gm Syrup", packaging: "200ml", category: "Syrup/Susp.", form: "Syrup" },
       { name: "AXIZONE-250/500/1gm", composition: "Ceftriaxone 250mg/500mg/1gm Injection", packaging: "10ml", category: "Injections", form: "Injection" },
-      { name: "AXIZONE-S 375/500/1gm + 75/250/500mg", composition: "Ceftriaxone 1gm & Sulbactam 500mg", packaging: "10ml/20ml", category: "Injections", form: "Injection" },
+      { name: "AXIZONE-S 375mg/750mg/1.5gm", composition: "Ceftriaxone & Sulbactam", packaging: "10ml/20ml", category: "Injections", form: "Injection" },
       { name: "DECOLVIT-PLUS", composition: "Methylcobalamine 1000mcg, Pyridoxine Hydrochloride 100mg, Niacinamide 100mg", packaging: "2 ml", category: "Injections", form: "Injection" },
     ],
   },
@@ -60,7 +61,8 @@ export const divisions = [
     isDataAvailable: true,
     description:
       "Medking Pharmaceuticals is the flagship division manufacturing a comprehensive range of high-quality pharmaceutical formulations across multiple therapeutic categories.",
-    specialties: ["General Medicine", "Chronic Disease", "Pediatrics", "Geriatrics"],
+    email: "medkingpharma@gmail.com",
+    specialties: ["General Medicine", "Chronic Disease", "Pediatrics", "Gastro", "Diabetic", "Neuro"],
     products: [
       { name: "Acnic-SP", composition: "Aceclofenac 100mg + Paracetamol 325mg + Serratiopeptidase 15mg", packaging: "10 x 10", category: "Tablets", form: "Tablet" },
       { name: "Acnic-TH", composition: "Aceclofenac 100mg + Thiocolchicoside 4/8mg", packaging: "10 x 10", category: "Tablets", form: "Tablet" },
@@ -99,8 +101,10 @@ export const divisions = [
       { name: "Ketomed-5", composition: "Ketoconazole, Neomycin, Clobetasole Propionate Tolnaftate, Iodochlorhydroxyquinoline & Dexpanthenol", packaging: "30 gm", category: "Ointments", form: "Ointment" },
       { name: "Ceftrol", composition: "Ceftriaxone 250/500/1gm", packaging: "250/500/1gm", category: "Injections", form: "Injection" },
       { name: "Ceftrol-S", composition: "Ceftriaxone + Sulbactam 375/750/1.5gm", packaging: "375/750/1.5gm", category: "Injections", form: "Injection" },
-      { name: "Ceftrol-TZ-281.25", composition: "Ceftriaxone 250 mg + Tazobactam 32.5 mg", packaging: "20ml vial", category: "Injections", form: "Injection" },
+      { name: "Ceftrol-TZ-281.25", composition: "Ceftriaxone 250 mg + Tazobactam 31.25 mg", packaging: "20ml vial", category: "Injections", form: "Injection" },
       { name: "Ceftrol-TZ-1.125", composition: "Ceftriaxone 1000 mg + Tazobactam 125 mg", packaging: "20ml vial", category: "Injections", form: "Injection" },
+      { name: "Mecony-C", composition: "Vitamin C with Methylcobalamin, Folic Acid, Niacinamide", packaging: "Combi Pack", category: "Injections", form: "Injection" },
+      { name: "Myzen-Plus", composition: "Methylcobalamin 1000mcg., Pyridioxine HCL 100mg, Thiamine HCL 100mg, Niacinamide 100mg, D-Panthenol 50mg", packaging: "2ml vial", category: "injection", form: "injection" },
       { name: "KETZO", composition: "Ketoconazole-2% w/v", packaging: "75mg", category: "Personal Care", form: "Soap" },
     ],
   },

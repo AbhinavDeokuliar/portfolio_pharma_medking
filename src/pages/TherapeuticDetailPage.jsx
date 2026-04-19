@@ -165,7 +165,7 @@ export default function TherapeuticDetailPage() {
                             </div>
                           </td>
                           <td className="px-8 py-6 text-slate-700 font-medium leading-relaxed italic max-w-sm">
-                            <div className="line-clamp-2 hover:line-clamp-none transition-all">
+                            <div>
                               {p.composition}
                             </div>
                           </td>

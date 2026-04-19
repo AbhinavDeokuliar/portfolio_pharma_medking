@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import PageHero from '../components/layout/PageHero';
 import { divisions } from '../data/divisions';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -60,6 +60,16 @@ export default function DivisionsPage() {
                       </span>
                     ))}
                   </div>
+
+                  {div.email && (
+                    <a 
+                      href={`mailto:${div.email}`} 
+                      className="flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-teal-600 mb-5 transition-colors"
+                    >
+                      <Mail size={14} className="text-teal-600 flex-shrink-0" />
+                      {div.email}
+                    </a>
+                  )}
 
                   <Link
                     to={`/divisions/${div.slug}`}
