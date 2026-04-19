@@ -88,9 +88,9 @@ export default function ContactPage() {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://www.medkinglifescience.com/contact",
+          "@id": "https://www.medkinglifescience.in/contact",
           "name": "Medking Lifescience",
-          "image": "https://www.medkinglifescience.com/logo.png",
+          "image": "https://www.medkinglifescience.in/logo.png",
           "description": "Pharmaceutical Manufacturing Plant - Contact & Business Inquiries",
           "address": {
             "@type": "PostalAddress",
@@ -102,7 +102,7 @@ export default function ContactPage() {
           },
           "telephone": "+91-70043-69887",
           "email": "medkinglifescience@gmail.com",
-          "url": "https://www.medkinglifescience.com/contact",
+          "url": "https://www.medkinglifescience.in/contact",
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",

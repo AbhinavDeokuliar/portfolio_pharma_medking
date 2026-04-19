@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Medking Lifescience';
-const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://www.medkinglifescience.com';
+const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://www.medkinglifescience.in';
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 /**

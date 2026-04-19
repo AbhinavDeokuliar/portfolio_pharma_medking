@@ -7,4 +7,4 @@ Disallow: /.env
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://www.medkinglifescience.com/sitemap.xml
+Sitemap: https://www.medkinglifescience.in/sitemap.xml

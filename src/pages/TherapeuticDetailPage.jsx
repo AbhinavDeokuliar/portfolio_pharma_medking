@@ -20,7 +20,7 @@ export default function TherapeuticDetailPage() {
     <div className="bg-white">
       <SEOHead
         title={`${category.name} Medicines`}
-        description={`${category.description} — ${category.products.length} pharmaceutical formulations from Medking Lifescience including ${category.products.slice(0,3).map(p=>p.name).join(', ')} & more.`}
+        description={`${category.description} — ${category.products.length} pharmaceutical formulations from Medking Lifescience including ${category.products.slice(0, 3).map(p => p.name).join(', ')} & more.`}
         keywords={`${category.name.toLowerCase()} medicines India, ${keywords}, pharmaceutical formulations`}
         canonical={`/products/${category.slug}`}
       />
@@ -46,19 +46,19 @@ export default function TherapeuticDetailPage() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.medkinglifescience.com/"
+              "item": "https://www.medkinglifescience.in/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Products",
-              "item": "https://www.medkinglifescience.com/products"
+              "item": "https://www.medkinglifescience.in/products"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": category.name,
-              "item": `https://www.medkinglifescience.com/products/${category.slug}`
+              "item": `https://www.medkinglifescience.in/products/${category.slug}`
             }
           ]
         })}</script>
@@ -83,12 +83,12 @@ export default function TherapeuticDetailPage() {
               <div>
                 <h2 className="text-3xl font-display font-bold text-navy-900">{category.name}</h2>
                 <div className="flex items-center gap-2 mt-1 text-slate-500 font-medium italic">
-                   Professional Grade Formulations
+                  Professional Grade Formulations
                 </div>
               </div>
             </div>
-            <Link 
-              to="/products" 
+            <Link
+              to="/products"
               className="inline-flex items-center gap-2 text-teal-600 font-bold hover:text-teal-700 transition-colors"
             >
               <LucideIcon name="ArrowLeft" size={20} />
@@ -117,13 +117,13 @@ export default function TherapeuticDetailPage() {
                         {p.form}
                       </span>
                     </div>
-                    
+
                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 mb-3 border border-white/50">
                       <p className="text-sm text-slate-700 leading-relaxed italic font-medium">
                         {p.composition || 'Composition details available on request.'}
                       </p>
                     </div>
-                    
+
                     <div className="flex items-center justify-between text-[11px]">
                       <div className="flex items-center gap-1.5 text-slate-500 font-bold uppercase tracking-wider">
                         <LucideIcon name="Package" size={12} />
@@ -171,8 +171,8 @@ export default function TherapeuticDetailPage() {
                           </td>
                           <td className="px-8 py-6">
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-bold whitespace-nowrap">
-                               <LucideIcon name="Factory" size={12} className={category.textColor} />
-                               {p.company}
+                              <LucideIcon name="Factory" size={12} className={category.textColor} />
+                              {p.company}
                             </span>
                           </td>
                           <td className="px-8 py-6 font-bold text-slate-600 whitespace-nowrap">

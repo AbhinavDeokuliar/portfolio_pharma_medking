@@ -2,7 +2,6 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { divisions } from '../data/divisions';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import CTABanner from '../components/home/CTABanner';
 import LucideIcon from '../components/common/LucideIcon';
 import SEOHead from '../components/common/SEOHead';
@@ -13,7 +12,6 @@ export default function DivisionDetailPage() {
 
   if (!division) return <Navigate to="/divisions" replace />;
 
-  const { ref, visible } = useScrollAnimation();
   const currentIndex = divisions.findIndex((d) => d.slug === slug);
   const prev = divisions[currentIndex - 1];
   const next = divisions[currentIndex + 1];
@@ -85,19 +83,19 @@ export default function DivisionDetailPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20 bg-white" ref={ref}>
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-10">
+            <div className="w-full lg:col-span-2 space-y-10">
               {/* Overview */}
-              <div className={`animate-on-scroll ${visible ? 'visible' : ''}`}>
+              <div className="animate-fade-in">
                 <h2 className="font-display text-2xl font-bold text-navy-900 mb-4">Division Overview</h2>
                 <p className="text-slate-600 leading-relaxed text-base">{division.description}</p>
               </div>
 
               {/* Product Range Cards */}
-              <div className={`animate-on-scroll delay-100 ${visible ? 'visible' : ''}`}>
+              <div>
                 <h2 className="font-display text-3xl font-bold text-navy-900 mb-8">Product Portfolio</h2>
 
                 {!hasProducts ? (
@@ -135,7 +133,7 @@ export default function DivisionDetailPage() {
                   const theme = getCategoryTheme(category);
 
                   return (
-                    <div key={category} className="mb-12 last:mb-0">
+                    <div key={category} className="mb-12 last:mb-0 w-full overflow-hidden">
                       <div className="flex items-center gap-4 mb-5">
                         <div className={`h-8 w-1.5 rounded-full bg-gradient-to-b ${division.color}`} />
                         <h3 className="font-display text-xl font-bold text-slate-800">{category}</h3>
@@ -144,7 +142,7 @@ export default function DivisionDetailPage() {
                       </div>
 
                       {/* Mobile/Tablet View (Cards) - Shown up to lg screens */}
-                      <div className="lg:hidden space-y-3">
+                      <div className="lg:hidden w-full space-y-3">
                         {categoryProducts.map((p, i) => (
                           <div key={i} className={`rounded-2xl border ${theme.border} ${theme.bg} shadow-sm overflow-hidden`}>
                             <div className={`h-1 w-full bg-gradient-to-r ${division.color}`} />
@@ -235,7 +233,7 @@ export default function DivisionDetailPage() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Specialties */}
-              <div className={`card p-6 animate-on-scroll delay-200 ${visible ? 'visible' : ''}`}>
+              <div className="card p-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <h3 className="font-display font-bold text-navy-900 text-lg mb-4">Key Specialties</h3>
                 <ul className="space-y-3">
                   {division.specialties.map((s) => (
@@ -248,7 +246,7 @@ export default function DivisionDetailPage() {
               </div>
 
               {/* Certifications */}
-              <div className={`bg-gradient-to-br from-navy-900 to-teal-900 rounded-2xl p-6 text-white animate-on-scroll delay-300 ${visible ? 'visible' : ''}`}>
+              <div className="bg-gradient-to-br from-navy-900 to-teal-900 rounded-2xl p-6 text-white animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <h3 className="font-display font-bold text-lg mb-4">Certifications</h3>
                 <div className="space-y-3">
                   {['ISO 9001:2015', 'GMP Certified', 'GLP Certified'].map((c) => (
@@ -261,7 +259,7 @@ export default function DivisionDetailPage() {
               </div>
 
               {/* CTA card */}
-              <div className={`card p-6 text-center animate-on-scroll delay-400 ${visible ? 'visible' : ''}`}>
+              <div className="card p-6 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${division.color} mx-auto flex items-center justify-center mb-4 shadow-lg text-white`}>
                   <LucideIcon name={division.icon} size={28} />
                 </div>
