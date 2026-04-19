@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow common utility paths
+Disallow: /src/
+Disallow: /.env
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://www.medkinglifescience.com/sitemap.xml
